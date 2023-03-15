@@ -16,6 +16,7 @@
 }
 
 @mixin  bg-color {
-    background: $color-light;
-    color: $color-dark;
+    background: #07031F;
+    background-image: url(../assets/bg.webp);
+    color: $color-light;
 }
