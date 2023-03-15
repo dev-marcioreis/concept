@@ -1,0 +1,42 @@
+/*==========Google Fonts==========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*==========Reset==========*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*==========Root==========*/
+$color-dark: hsl(0, 0%, 13%);
+$color-light: hsl(0, 0%, 100%);
+
+$transition: all 400ms ease;
+
+$shadow-1: 0 1px 4px hsla(0, 0%, 0%, 0.2);
+$shadow-2: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
+$shadow-3: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
+
+$color-1: hsl(357, 78%, 63%); 
+$color-2: hsl(355, 37%, 88%); 
+$color-3: hsl(268, 77%, 76%);
+$color-4: hsl(157, 72%, 66%);
+$color-5: hsl(16, 98%, 83%);
+$color-6: hsl(46, 100%, 65%);
+$color-7: hsl(348, 53%, 65%);
+
+
+
+
+
+
+
+
+
+

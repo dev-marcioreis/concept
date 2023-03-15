@@ -1,0 +1,68 @@
+/*==========Base==========*/
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+}
+body {
+    @include bg-color;
+
+    &::-webkit-scrollbar {
+        width: .6rem;
+      }
+    &::-webkit-scrollbar-track {
+        background: $color-dark;
+      }
+    &::-webkit-scrollbar-thumb {
+        background: $color-2;
+        border-radius: 1rem;
+      }
+}
+.section {
+    padding: 5rem 0;
+}
+.container {
+    padding: 0 10rem;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1, h2, h3, h4, h5 {
+    font-size: 1.3rem;
+}
+p, a, span, small, sub, sup {
+    font-size: 1rem;
+}
+
+.btn {
+    @include button-color;
+}
+  
+  
+/*==========Media Query==========*/
+@media (max-width: 1024px) {
+    html {
+        scroll-padding-top: 4rem;
+    }
+    .section {
+        padding: 2rem 0;
+    }
+    .container {
+        padding: 0 1rem;
+    }
+    h1, h2, h3, h4 {
+        font-size: 1.1rem;
+    }
+    p, a, span, small, sub, sup {
+        font-size: .9rem;
+    }
+    
+}
+  
