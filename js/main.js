@@ -21,3 +21,11 @@ const closeMenu = () => {
 }
 
 closeBtn.addEventListener('click', closeMenu)
+
+if(window.innerWidth < 1024) {
+    document.querySelectorAll('.navbar__list .navbar__link').forEach(navbar => {
+        navbar.addEventListener('click', () => {
+            closeMenu()
+        })
+    })
+}
