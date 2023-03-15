@@ -16,8 +16,9 @@
 /*==========Root==========*/
 $color-dark: hsl(0, 0%, 13%);
 $color-light: hsl(0, 0%, 100%);
+$color-text: hsl(210, 18%, 96%);
 
-$transition: all 400ms ease;
+$transition: all 400ms ease-in-out;
 
 $shadow-1: 0 1px 4px hsla(0, 0%, 0%, 0.2);
 $shadow-2: 0px 1px 3px hsla(0, 0%, 0%, 0.5);

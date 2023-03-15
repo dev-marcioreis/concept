@@ -1,0 +1,209 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 4rem;
+    background: $color-light;
+    box-shadow: $shadow-1;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+    z-index: 99;
+
+    .container {
+        transition: $transition;
+
+        .navbar__container {
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+
+            .logo {
+                display: block;
+
+                a {
+                    font-size: 1.5rem;
+                    font-weight: 900;
+                    color: $color-1;
+                }
+            }
+
+            .menu {
+                display: inline-block;
+                
+                .navbar__list {
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1.5rem;
+
+                    .navbar__link {
+                        padding: .5rem;
+                        
+                        a {
+                            position: relative;
+                            font-size: 1.2rem;
+                            color: $color-dark;
+                            font-weight: 500;
+                            letter-spacing: 1px;
+
+                            &::before {
+                                content: '';
+                                bottom: calc(100% - 2.5rem);
+                                position: absolute;
+                                width: 100%;
+                                height: .2rem;
+                                border-radius: 1rem;
+                                background: $color-1;
+                                opacity: 0;
+                                transition: $transition;
+                            }
+                        }
+
+                        &:hover a::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .toggle__btn {
+                display: none;
+            }
+        }
+    }
+}
+
+.scrollHeader {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*==========Media Query==========*/
+@media (min-width: 1600px) {
+    .header {
+        height: 4.5rem;
+
+        .container {
+    
+            .navbar__container {
+    
+                .logo {
+    
+                    a {
+                        font-size: 1.7rem;
+                    }
+                }
+    
+                .menu {
+                    
+                    .navbar__list {
+                        gap: 5rem;
+    
+                        .navbar__link {
+                            
+                            a {
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/*==========Media Query==========*/
+@media (max-width: 1024px) {
+    .header {
+        height: 3.5rem;
+    
+        .container {
+    
+            .navbar__container {
+    
+                .logo {
+    
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+    
+                .menu {
+                    
+                    .navbar__list {
+                        position: absolute;
+                        top: 4rem;
+                        right: -100%;
+                        width: 30%;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        gap: .5rem;
+                        background: $color-light;
+                        box-shadow: $shadow-1;
+                        border-radius: 1rem;
+                        transition: $transition;
+    
+                        .navbar__link {
+                            padding: 1rem;
+                            
+                            a {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+
+                    .showMenu {
+                        right: 0;
+                    }
+                }
+
+                .contact__btn {
+                    display: none;
+                }
+
+                .toggle__btn {
+                    display: inline-block;
+                    
+                    i {
+                        font-size: 2rem;
+                        color: $color-dark;
+                    }
+
+                    .closeBtn {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/*==========Media Query==========*/
+@media (max-width: 768px) {
+    .header {
+        height: 3.5rem;
+    
+        .container {
+    
+            .navbar__container {
+    
+                .menu {
+                    
+                    .navbar__list {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+

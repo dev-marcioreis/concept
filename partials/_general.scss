@@ -4,25 +4,26 @@ html {
     scroll-padding-top: 1rem;
 }
 body {
-    @include bg-color;
-    height: 100vh;
+   background: hsl(0, 0%, 99%);
+   color: $color-1;
+   height: 300rem;
 
     &::-webkit-scrollbar {
         width: .6rem;
       }
     &::-webkit-scrollbar-track {
-        background: $color-dark;
+        background: hsl(0, 0%, 99%);
       }
     &::-webkit-scrollbar-thumb {
-        background: $color-2;
+        background: $color-dark;
         border-radius: 1rem;
       }
 }
 .section {
-    padding: 5rem 0;
+    padding-top: 3rem;
 }
 .container {
-    padding: 0 10rem;
+    padding: 0 7rem;
     margin: 0 auto;
 }
 .flex {
@@ -48,12 +49,27 @@ p, a, span, small, sub, sup {
   
   
 /*==========Media Query==========*/
+@media (min-width: 1600px) {
+    html {
+        scroll-padding-top: 2rem;
+    }
+    .container {
+        padding: 0 5rem;
+    }
+    h1, h2, h3, h4 {
+        font-size: 1.5rem;
+    }
+    p, a, span, small, sub, sup {
+        font-size: 1.2rem;
+    }
+    
+}
+
+
+/*==========Media Query==========*/
 @media (max-width: 1024px) {
     html {
         scroll-padding-top: 4rem;
-    }
-    .section {
-        padding: 2rem 0;
     }
     .container {
         padding: 0 1rem;
