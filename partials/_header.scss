@@ -281,3 +281,30 @@
     }
 
 }
+
+
+/*==========Media Query small screens mobile==========*/
+@media (max-width: 768px) {
+    .header {
+    
+        .header__container {
+            
+            .navbar {
+                height: 3rem;
+    
+                .container {
+    
+                    .navbar__content {
+    
+                        .navbar__list {
+                            width: 20rem;
+                            height: 32rem;
+                            left: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
