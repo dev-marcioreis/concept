@@ -1,4 +1,5 @@
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,62 +7,81 @@
     <!--========Autor========-->
     <meta name="author" contente="Marcio Reis">
     <meta name="description" contente="Projeto do desenvolvedor front-end Marcio Reis">
-    <meta name="keywords" contente="HTML, CSS, SASS, Tailwind, Styled Components, JavaScript, TypeScript, React, Git, GitHub, Jest, Testing Library, SEO, Regex, Acessibilidade web, Scrum, Dev, Desenvolvedor, Front-end">
+    <meta name="keywords"
+        contente="HTML, CSS, SASS, Tailwind, Styled Components, JavaScript, TypeScript, React, Git, GitHub, Jest, Testing Library, SEO, Regex, Acessibilidade web, Scrum, Dev, Desenvolvedor, Front-end">
     <!--========Icon========-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!--========CSS========-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <!--========Favicon========-->
-    
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <!--========JavaScript========-->
     <script src="js/main.js" defer></script>
-    <title>supp</title>
+    <title>supp | Inovation</title>
 </head>
+
 <body>
-    
+
     <!--========Header========-->
     <header class="header">
-        <div class="container">
-            <nav class="navbar__container flex">
-                <div class="logo">
-                    <a href="index.html">LOGO</a>
-                </div>
-                <div class="menu">
-                    <ul class="navbar__list flex">
-                        <li class="navbar__link">
-                            <a href="#">início</a>
-                        </li>
-                        <li class="navbar__link">
-                            <a href="#">início</a>
-                        </li>
-                        <li class="navbar__link">
-                            <a href="#">início</a>
-                        </li>
-                        <li class="navbar__link">
-                            <a href="#">início</a>
-                        </li>
-                        <li class="navbar__link">
-                            <a href="#">início</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="contact__btn">
-                    <a href="#" class="btn">contato</a>
-                </div>
-                <div class="toggle__btn">
-                    <span class="openBtn"><i class="uil uil-bars"></i></span>
-                    <span class="closeBtn"><i class="uil uil-times"></i></span>
+        <div class="header__container">
+            <nav class="navbar">
+                <div class="container flex">
+                    <div class="navbar__content flex">
+                        <a href="index.html" class="logo flex">
+                            <img src="assets/logo.png" alt="Logo Image" class="logo-image">
+                            <span class="logo-name">supp</span>
+                        </a>
+                        <ul class="navbar__list flex">
+                            <li class="navbar__link"><a href="#home" class="active">início</a></li>
+                            <li class="navbar__link"><a href="#about">sobre</a></li>
+                            <li class="navbar__link"><a href="#project">projetos</a></li>
+                            <li class="navbar__link"><a href="#tech">tecnologias</a></li>
+                            <li class="navbar__link"><a href="#portfolio">portfólio</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar__btns flex">
+                        <a href="#" target="_blank" class="btn-primary">contato</a>
+                        <span class="openBtn toggleBtn"><i class="uil uil-bars"></i></span>
+                        <span class="closeBtn toggleBtn"><i class="uil uil-times"></i></span>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!--========Hero========-->
-    <section class="section hero">
+    <!--========Home========-->
+    <section class="section home" id="home">
         <div class="container">
-            <div class="hero__container">
-                
+            <div class="home__content flex">
+                <h2 class="home__title">Um novo padrão em design de sites</h2>
+                <div class="slider">
+                    <span style="--rotate:1;">
+                        <img src="assets/home/home1-image.jpg" alt="">
+                    </span>
+                    <span style="--rotate:2;">
+                        <img src="assets/home/home8-image.jpg" alt="">
+                    </span>
+                    <span style="--rotate:3;">
+                        <img src="assets/home/home3-image.jpg" alt="">
+                    </span>
+                    <span style="--rotate:4;">
+                        <img src="assets/home/home6-image.jpg" alt="">
+                    </span>
+                    <span style="--rotate:5;">
+                        <img src="assets/home/home2-image.jpg" alt="">
+                    </span>
+                    <span style="--rotate:6;">
+                        <img src="assets/home/home4-image.jpg" alt="">
+                    </span>
+                    <span style="--rotate:7;">
+                        <img src="assets/home/home7-image.jpg" alt="">
+                    </span>
+                    <span style="--rotate:8;">
+                        <img src="assets/home/home5-image.jpg" alt="">
+                    </span>
+                </div>
             </div>
         </div>
     </section>

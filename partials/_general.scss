@@ -4,26 +4,17 @@ html {
     scroll-padding-top: 1rem;
 }
 body {
-   background: hsl(0, 0%, 99%);
-   color: $color-1;
-   height: 300rem;
+   @include bg-color;
 
     &::-webkit-scrollbar {
-        width: .6rem;
-      }
-    &::-webkit-scrollbar-track {
-        background: hsl(0, 0%, 99%);
-      }
-    &::-webkit-scrollbar-thumb {
-        background: $color-dark;
-        border-radius: 1rem;
+        width: 0;
       }
 }
 .section {
     padding-top: 3rem;
 }
 .container {
-    padding: 0 7rem;
+    padding: 0 3rem;
     margin: 0 auto;
 }
 .flex {
@@ -54,7 +45,7 @@ p, a, span, small, sub, sup {
         scroll-padding-top: 2rem;
     }
     .container {
-        padding: 0 5rem;
+        padding: 0 2rem;
     }
     h1, h2, h3, h4 {
         font-size: 1.5rem;

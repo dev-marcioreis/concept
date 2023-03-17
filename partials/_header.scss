@@ -1,204 +1,195 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 4rem;
-    background: $color-light;
-    box-shadow: $shadow-1;
-    opacity: 0;
-    visibility: hidden;
-    transition: $transition;
-    z-index: 99;
+    
+    .header__container {
+        
+        .navbar {
+            position: fixed;
+            left: 0;
+            width: 100vw;
+            height: 4rem;
+            background: $color-dark;
+            box-shadow: $shadow-3;
+            z-index: 99;
 
-    .container {
-        transition: $transition;
+            .container {
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                transition: $transition;
 
-        .navbar__container {
-            position: relative;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            height: 100%;
+                .navbar__content {
+                    align-items: center;
+                    justify-content: space-between;
 
-            .logo {
-                display: block;
+                    .logo {
+                        align-items: center;
+                        justify-content: center;
+                        gap: .4rem;
 
-                a {
-                    font-size: 1.5rem;
-                    font-weight: 900;
-                    color: $color-1;
+                        .logo-image {
+                            width: 1.7rem;
+                            height: 1.7rem;
+                        }
+
+                        .logo-name {
+                            margin-right: 3rem;
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            color: $color-8;
+                            letter-spacing: 2px;
+                        }
+                    }
+
+                    .navbar__list {
+                        align-items: center;
+                        justify-content: center;
+                        gap: 3rem;
+                        height: 4rem;
+                        padding: 0 .5rem;
+
+                        .navbar__link {
+
+                            a {
+                                position: relative;
+                                font-size: 1.2rem;
+                                font-weight: 200;
+                                text-transform: capitalize;
+                                color: $color-light;
+                                letter-spacing: 1px;
+                                height: 100%;
+                                padding: 0 .5rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: $transition;
+
+                                &.active {
+                                    background: $color-8;
+                                }
+
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                    background: $color-8;
+                                    width: 100%;
+                                    height: 0;
+                                    transition: height .5s;
+                                    z-index: -1;
+                                }
+        
+                                &:hover {
+        
+                                    &::before {
+                                        height: 4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-            }
 
-            .menu {
-                display: inline-block;
-                
-                .navbar__list {
+
+                .navbar__btns {
                     align-items: center;
                     justify-content: center;
-                    gap: 1.5rem;
+                    gap: 1rem;
+                    height: 100%;
 
-                    .navbar__link {
-                        padding: .5rem;
-                        
-                        a {
-                            position: relative;
-                            font-size: 1.2rem;
-                            color: $color-dark;
-                            font-weight: 500;
-                            letter-spacing: 1px;
-
-                            &::before {
-                                content: '';
-                                bottom: calc(100% - 2.5rem);
-                                position: absolute;
-                                width: 100%;
-                                height: .2rem;
-                                border-radius: 1rem;
-                                background: $color-1;
-                                opacity: 0;
-                                transition: $transition;
-                            }
-                        }
-
-                        &:hover a::before {
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-
-            .toggle__btn {
-                display: none;
-            }
-        }
-    }
-}
-
-.scrollHeader {
-    opacity: 1;
-    visibility: visible;
-}
-
-
-/*==========Media Query==========*/
-@media (min-width: 1600px) {
-    .header {
-        height: 4.5rem;
-
-        .container {
-    
-            .navbar__container {
-    
-                .logo {
-    
-                    a {
-                        font-size: 1.7rem;
-                    }
-                }
-    
-                .menu {
-                    
-                    .navbar__list {
-                        gap: 5rem;
-    
-                        .navbar__link {
-                            
-                            a {
-                                font-size: 1.3rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-}
-
-
-/*==========Media Query==========*/
-@media (max-width: 1024px) {
-    .header {
-        height: 3.5rem;
-    
-        .container {
-    
-            .navbar__container {
-    
-                .logo {
-    
-                    a {
-                        font-size: 1.2rem;
-                    }
-                }
-    
-                .menu {
-                    
-                    .navbar__list {
-                        position: absolute;
-                        top: 4rem;
-                        right: -100%;
-                        width: 30%;
-                        align-items: flex-start;
-                        flex-direction: column;
-                        gap: .5rem;
-                        background: $color-light;
-                        box-shadow: $shadow-1;
-                        border-radius: 1rem;
-                        transition: $transition;
-    
-                        .navbar__link {
-                            padding: 1rem;
-                            
-                            a {
-                                font-size: 1rem;
-                            }
-                        }
+                    .btn-primary {
+                        background: $color-8;
+                        height: 100%;
+                        text-transform: capitalize;
+                        font-weight: 500;
+                        color: $color-light;
+                        padding: 0 .7rem;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
 
-                    .showMenu {
-                        right: 0;
-                    }
-                }
-
-                .contact__btn {
-                    display: none;
-                }
-
-                .toggle__btn {
-                    display: inline-block;
-                    
-                    i {
+                    .toggleBtn {
                         font-size: 2rem;
-                        color: $color-dark;
-                    }
-
-                    .closeBtn {
+                        color: $color-light;
+                        cursor: pointer;
                         display: none;
                     }
                 }
             }
         }
     }
+}
 
+#home {
+    padding-block-start: 5rem;
+    height: 100vh;
+}
+#about {
+    height: 100vh;
+}
+#project {
+    height: 100vh;
+}
+#tech {
+    height: 100vh;
+}
+
+#portfolio {
+    height: 100vh;
 }
 
 
-/*==========Media Query==========*/
-@media (max-width: 768px) {
+/*==========Media Query big screens==========*/
+@media (min-width: 1600px) {
     .header {
-        height: 3.5rem;
     
-        .container {
+        .header__container {
+            
+            .navbar {
     
-            .navbar__container {
+                .container {
     
-                .menu {
-                    
-                    .navbar__list {
-                        width: 60%;
+                    .navbar__content {
+    
+                        .logo {
+                            gap: 1rem;
+    
+                            .logo-image {
+                                width: 2.2rem;
+                                height: 2.2rem;
+                            }
+    
+                            .logo-name {
+                                margin-right: 10rem;
+                                font-size: 1.8rem;
+                            }
+                        }
+    
+                        .navbar__list {
+                            gap: 5rem;
+    
+                            .navbar__link {
+                                
+                                a {
+                                    font-size: 1.4rem;
+                                    font-weight: 200;
+                                    text-transform: uppercase;
+                                    letter-spacing: 2px;
+                                }
+                            }
+                        }
+                    }
+    
+                    .navbar__btns {
+    
+                        .btn-primary {
+                            text-transform: uppercase;
+                            font-weight: 200;
+                            padding: 0 1rem;
+                            letter-spacing: 2px;
+                        }
                     }
                 }
             }
@@ -207,3 +198,86 @@
 
 }
 
+
+/*==========Media Query small screens==========*/
+@media (max-width: 1024px) {
+    .header {
+    
+        .header__container {
+            
+            .navbar {
+                height: 3rem;
+    
+                .container {
+    
+                    .navbar__content {
+                        position: relative;
+    
+                        .logo {
+                            gap: .7rem;
+    
+                            .logo-image {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+    
+                            .logo-name {
+                                font-size: 1.5rem;
+                            }
+                        }
+    
+                        .navbar__list {
+                            position: absolute;
+                            top: -40rem;
+                            left: 0;
+                            width: 21.5rem;
+                            height: 35rem;
+                            background: $color-dark;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            gap: 0;
+                            padding: 1rem 2rem; 
+                            box-shadow: $shadow-3;
+                            border-radius: 1rem;
+                            transition: $transition;
+    
+                            .navbar__link {
+                                margin-block-start: 3.5rem;
+                                
+                                a {
+                                    font-size: 1.1rem;
+                                    letter-spacing: 1px;
+                                    font-weight: 400;
+                                    padding: .5rem;
+                                }
+                            }
+
+                            &.active {
+                                top: 3rem;
+                            }
+                        }
+                    }
+    
+                    .navbar__btns {
+    
+                        .btn-primary {
+                            letter-spacing: 2px;
+                            height: 50%;
+                        }
+    
+                        .toggleBtn {
+                            display: block;
+                            padding: .2rem;
+                        }
+
+                        .closeBtn {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

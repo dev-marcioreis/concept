@@ -1,31 +1,49 @@
-// Scroll navbar opacity
-window.addEventListener('scroll', () => {
-    document.querySelector('.header').classList.toggle('scrollHeader', window.scrollY)
-})
-
-// Menu mobile
+// Navbar mobile
 const openBtn = document.querySelector('.openBtn')
 const closeBtn = document.querySelector('.closeBtn')
-const menu = document.querySelector('.navbar__list')
+const navMenu = document.querySelector('.navbar__list')
 
 openBtn.addEventListener('click', () => {
-    menu.classList.add('showMenu')
+    navMenu.classList.toggle('active')
     openBtn.style.display = 'none'
-    closeBtn.style.display = 'inline-block'
+    closeBtn.style.display = 'block'
 })
 
 const closeMenu = () => {
-    menu.classList.remove('showMenu')
+    navMenu.classList.remove('active')
+    openBtn.style.display = 'block'
     closeBtn.style.display = 'none'
-    openBtn.style.display = 'inline-block'
 }
 
 closeBtn.addEventListener('click', closeMenu)
 
 if(window.innerWidth < 1024) {
     document.querySelectorAll('.navbar__list .navbar__link').forEach(navbar => {
-        navbar.addEventListener('click', () => {
+        navMenu.addEventListener('click', () => {
             closeMenu()
         })
     })
 }
+
+// Navbar scroll
+const section = document.querySelectorAll('section')
+const navLink = document.querySelectorAll('.navbar .navbar__list .navbar__link a')
+
+window.onscroll = () => {
+    
+    section.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 150;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
+
+        if(top >= offset && top < offset + height) {
+            navLink.forEach(links => {
+                links.classList.remove('active')
+                document.querySelector('.navbar .navbar__list .navbar__link a[href*=' + id +']').classList.add('active');
+            });
+        };
+    });
+};
+
+

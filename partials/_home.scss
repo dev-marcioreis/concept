@@ -1,0 +1,171 @@
+.home {
+    position: relative;
+    background: $color-dark;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../assets/home/bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 17rem;
+        right: -5rem;
+        background: $color-8;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        filter: brightness(1.5) contrast(1.5) blur(150px);
+    }
+
+    .container {
+
+        .home__content {
+            margin-block-start: 5rem;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .home__title {
+                font-size: 4rem;
+                font-weight: 100;
+                color: $color-8;
+                margin-block-end: 6rem;
+            }
+
+            .slider {
+                position: relative;
+                width: 270px;
+                height: 180px;
+                transform-style: preserve-3d;
+                animation: rotate 30s linear infinite;
+
+                @keyframes rotate {
+                    0% {
+                        transform: perspective(1000px) rotateY(0);
+                    }
+                    100% {
+                        transform: perspective(1000px) rotateY(360deg);
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transform-style: preserve-3d;
+                    transform-origin: center;
+                    transform: rotateY(calc(var(--rotate)*45deg)) translateZ(350px);
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: .5rem;
+                        filter: contrast(1.2) brightness(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*==========Media Query big screens==========*/
+@media (min-width: 1600px) {
+    .home {
+    
+        &::before {
+            top: 12rem;
+            right: -20rem;
+            width: 600px;
+            height: 600px;
+        }
+    
+        .container {
+    
+            .home__content {
+                margin-block-start: 7rem;
+    
+                .home__title {
+                    font-size: 5rem;
+                    margin-block-end: 10rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+/*==========Media Query small screens==========*/
+@media (max-width: 1024px) {
+    .home {
+        background-image: none;
+    
+        &::before {
+            top: 10rem;
+            right: -1rem;
+            width: 500px;
+            height: 500px;
+        }
+    
+        .container {
+    
+            .home__content {
+                margin-block-start: 2rem;
+    
+                .home__title {
+                    font-size: 2.5rem;
+                    margin-block-end: 10rem;
+                }
+    
+                .slider {
+                    width: 250px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+
+}
+
+
+/*==========Media Query small screens mobile==========*/
+@media (max-width: 768px) {
+    .home {
+    
+        &::before {
+            top: 35rem;
+            right: -4rem;
+            width: 400px;
+            filter: brightness(1.5) contrast(1.5) blur(100px);
+        }
+    
+        .container {
+    
+            .home__content {
+                margin-block-start: 2rem;
+                text-align: center;
+    
+                .home__title {
+                    font-size: 2.5rem;
+                    margin-block-end: 7rem;
+                }
+    
+                .slider {
+                    width: 240px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+}
