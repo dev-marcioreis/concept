@@ -37,6 +37,12 @@ p, a, span, small, sub, sup {
 .btn {
     @include button-color;
 }
+.btn-primary {
+    background: $color-8;
+}
+
+
+
   
   
 /*==========Media Query==========*/
