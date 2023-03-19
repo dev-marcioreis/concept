@@ -48,6 +48,52 @@
                         padding: 0 .5rem;
 
                         .navbar__link {
+                            position: relative;
+
+                            &:hover {
+
+                                .sub__navbar {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+
+                            .sub__navbar {
+                                position: absolute;
+                                margin-block-start: .7rem;
+                                padding: .1rem 0;
+                                width: 12rem;
+                                background: $color-dark;
+                                box-shadow: $shadow-3;
+                                transition: $transition;
+                                opacity: 0;
+                                visibility: hidden;
+                                z-index: 1;
+
+                                li {
+                                    width: 100%;
+                                    margin: 0;
+
+                                    a {
+                                        width: 100%;
+                                        display: inline-block;
+                                        color: $color-light;
+                                        padding: .7rem 1rem;
+                                        font-size: .9rem;
+                                        font-weight: 200;
+                                        letter-spacing: 2px;
+                                        transition: $transition;
+
+                                        &:hover {
+                                            background: $color-8;
+                                        }
+
+                                        &::before {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
 
                             a {
                                 position: relative;
@@ -244,6 +290,10 @@
     
                             .navbar__link {
                                 margin-block-start: 3.5rem;
+
+                                .sub__navbar {
+                                    display: none;
+                                }
                                 
                                 a {
                                     font-size: 1.1rem;
