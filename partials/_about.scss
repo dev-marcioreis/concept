@@ -16,6 +16,10 @@
               line-height: 1.2;
               margin-block-end: 2rem;
             }
+
+            .btn {
+              -webkit-box-reflect: below 20px linear-gradient(to bottom, hsla(0, 0%, 13%, 0), hsla(0, 0%, 13%, 0.11));
+            }
         }
 
         .earth {
@@ -159,15 +163,16 @@
     
         .about__container {
             flex-direction: column-reverse;
-            margin-block-start: -3rem;
+            margin-block-start: -1rem;
     
             .about__text {
                 text-align: center;
                 width: 100%;
-                margin-block-start: 5rem;
+                margin-block-start: 1.5rem;
 
                 .text {
-                  text-align: left;
+                  text-align: center;
+                  font-size: 1.2rem;
                 }
             }
     
@@ -175,17 +180,17 @@
                 width: 100%;
 
                 .loader {
-                    width: 380px;
-                    height: 380px;
+                    width: 350px;
+                    height: 350px;
             
                     &::before {
                         background-size: 300px 200px;
                       }
                   }
-            
+
                   .globe {
-                    width: 340px;
-                    height: 340px;
+                    width: 300px;
+                    height: 300px;
                   }
               }
         }
@@ -207,7 +212,7 @@
                 margin-block-start: 2rem;
 
                 .text {
-                  font-size: 1.2rem;
+                  font-size: 1.1rem;
                   margin-block-end: 2rem;
                 }
             }
