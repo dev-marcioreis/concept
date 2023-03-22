@@ -1,3 +1,31 @@
 .footer {
     border-top: 1px solid $color-8;
+    margin-block-end: 4rem;
+
+    .container {
+        
+        .footer__content {
+            align-items: center;
+            justify-content: space-around;
+
+            .logo {
+                align-items: center;
+                justify-content: center;
+                gap: .4rem;
+
+                .logo-image {
+                    width: 1.7rem;
+                    height: 1.7rem;
+                }
+
+                .logo-name {
+                    margin-right: 3rem;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    color: $color-8;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
 }
