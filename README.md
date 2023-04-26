@@ -6,7 +6,7 @@ Este projeto tem como objetivo testar algumas animações em SASS e JavaScipt.
 
 ## 🚀 Finalizado.
 
-## 📋 Técnologias
+## 📋 Tecnologias
 HTML + SASS + JavaScript
 
 ## ✒️ Autor
